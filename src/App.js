@@ -38,11 +38,8 @@ let sorted_module_keys = Object.keys(modules).sort((a, b) => {
     return b.startsWith("P")? 1: parseInt(a) - parseInt(b);
 });
 
-console.log(sorted_module_keys);
-
 const root_link = <Link to="/">Moondo Reyes</Link>;
 const App = () => {
-    console.log(image);
     let img = <img src={image} />
     let modules_cards_html = sorted_module_keys.map((key) => {
         return (
@@ -92,18 +89,19 @@ const App = () => {
                         {NavigationLinks}
                     </Drawer>
                     <Content>
-                        <Grid>
-                            <Cell col={2}></Cell>
-                            <Cell col={8}>
-                                <Route exact path="/" render={() => (
+                        <Route exact path="/" render={() => (
+                            <Grid>
+                                <Cell col={2}></Cell>
+                                <Cell col={8}>
                                     <Grid>
                                         {modules_cards_html}
                                     </Grid>
-                                )}/>
-                                <Route exact path="/M:module_id" component={ModuleTopics}/>
-                                <Route exact path="/M:module_id/:topic_id" component={Activity}/>
-                            </Cell>
-                        </Grid>
+                                </Cell>
+                            </Grid>
+
+                        )}/>
+                        <Route exact path="/M:module_id" component={ModuleTopics}/>
+                        <Route exact path="/M:module_id/:topic_id" component={Activity}/>
                     </Content>
                 </Layout>
             </div>

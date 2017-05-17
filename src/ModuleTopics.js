@@ -32,11 +32,16 @@ const ModuleTopics = ({match}) => {
         </Cell>
     ));
     return (
-        <div className="">
-            <Grid>
-                {topics}
-            </Grid>
-        </div>
+        <Grid>
+            <Cell col={2}></Cell>
+            <Cell col={8}>
+                <div className="">
+                    <Grid>
+                        {topics}
+                    </Grid>
+                </div>
+            </Cell>
+        </Grid>
     );
 }
 

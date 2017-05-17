@@ -1,8 +1,14 @@
 import React, {Component} from "react";
 import ReactMarkdown from "react-markdown";
-import MarkdownToHTML from "react-markdown-to-html";
+import {
+    Cell,
+    Grid
+} from "react-mdl";
+
+import HtmlToReact, {Parser} from "html-to-react";
 
 import showdown from "showdown";
+import glob from "glob";
 
 const Activity = ({match}) => {
     let module_id = match.params.module_id
@@ -18,8 +24,51 @@ const Activity = ({match}) => {
     let converter = new showdown.Converter();
     let content = converter.makeHtml(decoded_file_content);
 
+    let parser = new Parser();
+
+    var processNodeDefinitions = new HtmlToReact.ProcessNodeDefinitions(React);
+
+    var instructions = [
+        {
+            // This is REQUIRED, it tells the parser
+            // that we want to insert our React
+            // component as a child
+            shouldProcessNode: function (node) {
+                return node.name === "img" && node.attribs && node.attribs['src'];
+            },
+            processNode: function (node, children, index) {
+                let img = "";
+                try {
+                    img = require(node.attribs['src']);
+                    img = <img src={img} alt={node.attribs['alt']} />
+                } catch (exception){
+                    console.log("Error on " + node.attribs["src"]);
+                } finally {
+                    return img;
+                }
+
+            }
+        },
+        {
+            // Anything else
+            shouldProcessNode: function (node) {
+                return true;
+            },
+            processNode: processNodeDefinitions.processDefaultNode,
+        },
+    ];
+
+    let react_components = parser.parseWithInstructions(content, () => true, instructions);
+
     return (
-        <div dangerouslySetInnerHTML={{__html:content}} />
+        <Grid style={{background: "#ddd"}}>
+            <Cell col={2}></Cell>
+            <Cell col={8} style={{background: "#fafafa"}}>
+                <div style={{margin: "4em 3em"}}>
+                    {react_components}
+                </div>
+            </Cell>
+        </Grid>
     );
 };
 

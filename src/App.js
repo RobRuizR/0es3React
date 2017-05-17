@@ -21,8 +21,10 @@ import {
     Navigation
 } from "react-mdl";
 
-import modules from "./data/modules.json";
 import ModuleTopics from "./ModuleTopics";
+import Activity from "./Activity";
+
+import modules from "./data/modules.json";
 let image = require("./content/dog.png");
 
 let sorted_module_keys = Object.keys(modules).sort((a, b) => {
@@ -109,17 +111,5 @@ const App = () => {
     );
 };
 
-
-
-class Activity extends Component {
-    constructor(props){
-        super(props);
-        console.log(props);
-    }
-
-    render(){
-        return <div></div>
-    }
-};
 
 export default App;

@@ -5,7 +5,9 @@
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-markdown": "^2.5.0",
     "react-markdown-file": "0.0.4",
+    "react-markdown-to-html": "^1.0.11",
     "react-mdl": "^1.10.3"
   },
   "devDependencies": {

@@ -40,7 +40,7 @@ Conforme el viento el obstáculo que presentan los edificios y otras estructuras
 El uso del suelo es un factor muy importante para conseguir una forma urbana. Durante gran parte del siglo XX , la zonificación separo los lugares de trabajo de los de residencia, comerciales, o de ocio, lo que provocaba que mucha gente tuviera que recorrer grandes distancias diariamente, repercutiendo en la calidad de vida y, además aumentando los niveles de contaminación global por el obligado uso de transporte. El esfuerzo por construir ciudades más sostenibles ha provocado que ésta política de zonificación haya empezado a cambiar. Los centros urb anos y de barrio, los edificios y espacios multiusos donde se combinan usos cívicos, residenciales, empresariales, comerciales y de ocio.
 
 
-##### Denisdad:
+##### Densidad:
 En general, se considera que los modelos de desarrollo urbano sostenible dependen del esfuerzo y de la renovación de los tejidos existentes, y de la aplicación de los principios bioclimáticos a todas las actividades que sobre ellos se desarrollan.
 
 
@@ -63,13 +63,86 @@ Las franjas de suelo permeable filtrante y las lagunas de captación permite que
 
 ##### Forma de la ciudad del siglo XXI:
 
-![](./content/P2/MP2.2/Ciudad sustentable.00.jpg)
-![](./content/P2/MP2.2/Ciudad sostenible.2.jpg)
-![](./content/P2/MP2.2/arrw08_22a.gif)
-![](./content/P2/MP2.2/sugerencias.gif)
-![](./content/P2/MP2.2/Rogers.jpg)
-![](./content/P2/MP2.2/email_41.gif)
+El aumento de la densidad de población en las zonas urbanas ofrece las siguientes ventajas:
+- Permite mantener una red de transporte público.
+- Cohesiona los diferentes barrios.
+- Mejora el microclima urbano.
+- Aumenta la eficiencia energética de los edificios.
+La combinación de compacidad y diversidad de usos contribuye el único modelo sostenible, aunque entraña ciertas limitaciones. Desde el punto de vista del desarrollo sostenible, la ciudad es compacta, con límites bien definidos y edificios de mediana altura, ni demasiado altos ni demasiado bajos. Esto se debe a que los edificios altos necesitan energía para los elevadores , son caros y difíciles de mantener proyectan sombra sobre el resto del pasaje urbano y generan microclimas perjudiciales en su base. La configuración óptima conjunta alta densidad, mezcla de usos y mediana altura, con alturas de cuatro a diez plantas.
 
+Las plazas ajardinadas y las avenidas arboladas so otra de las características ineludibles de la ciudad ideal. Como el modelo de ciudad para un futuro sostenible se basa en el transporte público, todo desarrollo urbano deberá descansar en la densidad de la población y la complejidad de los tipos de movimientos. La ciudad del futuro también necesitará intercambiadores modales de transporte, es decir, estaciones que proporcionen un acceso fácil y rápido de autobuses , metro ligero, taxis y bicicletas, y que tengan en cuenta las necesidades de todos los peatones, incluyendo los discapacitados. Estas estaciones se convertirán en nodos urbanos con gran capacidad para atraer el comercio, el ocio, la educación y la cultura, todo sustentado por centros residenciales cercanos, que darán forma y legibilidad de la zona. Políticas de planeación urbana que promueven un estilo de vida sostenible apoyadas por el gobierno británico.
+- Mejorar la habitabilidad de las zonas urbanas.
+- Promover la regeneración compacta y de uso mixto.
+- Mejorar los accesos para peatones y ciclistas.
+- Concentrar la urbanización en torno a nodos de transporte público.
+La energía es evidentemente la principal preocupación medioambiental, en especial para los arquitectos, pero la preocupación por la ecología humana y natural de la ciudad también es importante. Los ríos, canales, parques, jardines y cubiertas ajardinadas ofrecen la oportunidad de introducir la naturaleza de nuevo a las ciudades.
+
+
+![](./content/P2/MP2.2/CiudadSustentable.jpg)
+
+![](./content/P2/MP2.2/Rogers.jpg)
+
+![](./content/P2/MP2.2/CiudadSostenible.jpg)
+
+
+##### Principios de proyecto para el desarrollo sostenible.
+
+**En la ciudad:**
+- Compactación.
+- Calles liberadas de tráfico
+- Incremento de la densidad de las zonas suburbanas.
+- Mayor diversidad de usos del suelo en las zonas con fácil acceso al transporte público (nodos y subnodos ).
+- Edificio de viviendas de 4 plantas.
+- Legiblidad.
+
+**En el barrio:**
+- Diversidad de usos de suelo.
+- Calles seguras y agradables.
+- Conservación de los edificios históricos.
+- Carriles para bicicletas.
+- Rutas/corredores para tranvías.
+- Utilización de fuentes de energía local.
+
+**En el ámbito local:**
+- Proyectar teniendo en cuenta la naturaleza (parques, calles, etc) y la biodiversidados
+- Utilizar primero los terrenos o edificios abandonados.
+- Reforzar los cinturones o corredores verdes.
+
+**En el edificio:**
+- Proyectar para producir un bajo impacto ambiental (local, regional y global).
+- Proyectar para la durabilidad.
+- Proyectar para la reutilización.
+- Maximizar el consumo de energía renovable.
+- Distribuir el edificio de forma que se autoproteja de los elementos.
+- Permitir a los usuarios gestionar directamente el consumo de energía.
+- Proyectar teniendo en cuenta el clima.
+- Proyectar para proteger la salud de los usuarios.
+- Aprender de las prácticas vernáculas.
+
+
+**Metabolismo de la ciudad.**
+El actual modelo territorial y urbano tiene 2 características clave:
+1. El incremento exponencial de las necesidades de transporte.
+2. El aumento de necesidades energéticas respecto a modelos anteriores.
+
+El aumento de la población urbana - la población tiende a concentrarse en las ciudades de los países industrializados- genera grandes necesidades de abastecimiento energético, junto con la infraestructura necesaria para cubrirlo.
+El aumento de la energía consumida se debe tanto a la modificación del sistema productivo como a la nueva estructura espacial de éste, que se desarrolla paralelamente y a consecuencia del incremento de las necesidades de transporte, el aumento del territorio urbano y el aumento de la población.
+Los nuevos modelos residenciales que se establecen con el incremento de los hogares unipersonales implican que la misma población tenga mayores necesidades energéticas, no sólo demanda de edificación y su costo energético implícito sino por la multiplicación de equipamiento doméstico y costo de energía derivados de su funcionamiento.
+El flujo horizontal manifestado en forma de transporte tiene una gran influencia sobre el sistema. En las ciudades, el exceso de consumo de energía generando por los transportes entre el centro y la periferias se mantiene -aún con los costos energéticos, ambientales y económicos que conlleva - porque permite ejercer un sistema de control y de aprovechamiento del territorio y de las fronteras más allá de su ámbito de acción natural. La extensión de la infraestuctura de transporte supone una inversión del espacio rural, que repercute en la disminución de la biomasa y la biodiversidad de los ecosistemas naturales. A través de la extensión del hábitat urbano, el ser humano explota a la Naturaleza, no permitiendo que exista equilibrio en los ecosistemas naturales.
+
+##### PREGUNTAS:
+
+1. ¿Cuál sería la configuración ideal de una ciudad sostenible en cuanto a la forma de los edificios?....
+
+2. ¿Cómo sería una ciudad sustentable ideal para el futuro?...
+
+3. Explica el término isla de calor.
+
+4. Explica ampliamente. ¿Cómo sería sería una ciudad sustentable ideal?..
+
+5. Investiga en Internet y/o cita una referencia de algún libro en dónde aparezca un ejemplo de ciudad sustentable.
+
+---
 
 > "Una ciudad sustentable es aquella en cuya región impera un balance numérico positivo de las variables ambientales. En la cuenca de México hace muchos años que se trascendió la capacidad de carga. el proyecto de la recuperación de los lagos de Texcoco nace de una visión territorial y contemporánea, más productiva, que considera que, tras redefinir los trayectos (y estadías) del agua en la cuenca, múltiples e inmensos otros beneficios podrían ser capitalizados; en los humano, lo natural, lo financiero, lo social, y lo físico; a través de la transformación del paisaje a uno sustentable en que se reconcilie la ciudad con su historia y geografía"...
 

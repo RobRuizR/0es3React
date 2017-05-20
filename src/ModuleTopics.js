@@ -14,6 +14,8 @@ import {
 import modules from "./data/modules.json";
 
 const ModuleTopics = ({match}) => {
+    document.title = modules[match.params.module_id].name + " - Moondo Reyes";
+
     const topics = modules[match.params.module_id].topics.map(object => (
         <Cell col={3} tablet={4} phone={6} key={object.file}>
             <Card shadow={0}

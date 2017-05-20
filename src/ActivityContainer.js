@@ -1,9 +1,13 @@
 import React, {Component} from "react";
 import ActivityPresentation from "./ActivityPresentation";
+import modules from "./data/modules.json";
 
 class ActivityContainer extends Component {
     constructor(props){
         super(props);
+
+        console.log(props);
+        console.log(modules);
 
         this.state = {
             file_markdown: null,
@@ -11,6 +15,10 @@ class ActivityContainer extends Component {
 
         let module_id = props.match.params.module_id;
         let topic_id = props.match.params.topic_id;
+        let page_title = modules[module_id].topics.find(element => element.file === topic_id).name;
+
+        document.title = page_title + " - Moondo Reyes";
+
         this.file_content = require("./content/" + module_id + "/" + topic_id + "/" + topic_id + ".md");
         this.file_markdown = null;
 
@@ -23,7 +31,7 @@ class ActivityContainer extends Component {
             let decoded_file_content = decodeURIComponent(Array.prototype.map.call(atob(this.file_content), function(c) {
                 return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
             }).join(''));
-            this.setState({file_markdown: decoded_file_content});
+            this.state.file_markdown = decoded_file_content;
         } else {
             let self = this;
             fetch(this.file_content).then(resp => {

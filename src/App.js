@@ -22,7 +22,7 @@ import {
 } from "react-mdl";
 
 import ModuleTopics from "./ModuleTopics";
-import Activity from "./Activity";
+import ActivityContainer from "./ActivityContainer";
 
 import modules from "./data/modules.json";
 let image = require("./content/dog.png");
@@ -101,7 +101,7 @@ const App = () => {
 
                         )}/>
                         <Route exact path="/M:module_id" component={ModuleTopics}/>
-                        <Route exact path="/M:module_id/:topic_id" component={Activity}/>
+                        <Route exact path="/M:module_id/:topic_id" component={ActivityContainer}/>
                     </Content>
                 </Layout>
             </div>

@@ -27,8 +27,8 @@ const NavigationLinks = ({props}) =>{
             <span key={key}>
                 <hr className="navbar_hr"/>
                 <Navigation key={key}>
-                    <div className="mdl-navigation__link">
-                        {"Módulo " + (key.startsWith("P")?("Preliminar " + key.match(/\d+/)[0]) : key)}
+                    <div className="mdl-navigation__link" style={{color:modules[key].color}}>
+                        {"Módulo " + (key.startsWith("P")?("Preliminar " + key.match(/\d+/)[0]) : key) + ": " + modules[key].name}
                     </div>
                     {module_links}
                 </Navigation>

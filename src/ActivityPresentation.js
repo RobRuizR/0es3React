@@ -1,7 +1,6 @@
 import React from 'react';
 import showdown from "showdown";
 import HtmlToReact, {Parser} from "html-to-react";
-import ReactMarkdown from "react-markdown";
 import {
     Cell,
     Grid

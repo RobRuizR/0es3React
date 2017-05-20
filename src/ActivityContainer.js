@@ -6,9 +6,6 @@ class ActivityContainer extends Component {
     constructor(props){
         super(props);
 
-        console.log(props);
-        console.log(modules);
-
         this.state = {
             file_markdown: null,
         }
@@ -31,6 +28,11 @@ class ActivityContainer extends Component {
             let decoded_file_content = decodeURIComponent(Array.prototype.map.call(atob(this.file_content), function(c) {
                 return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
             }).join(''));
+
+            // This is not an error, as strange as it might look. If this is not
+            // done, react will try to update the state in an async manner
+            // while its child ActivityPresentation is being constructed.
+            // To avoid this, state is changed directly.
             this.state.file_markdown = decoded_file_content;
         } else {
             let self = this;

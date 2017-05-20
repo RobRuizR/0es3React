@@ -15,23 +15,22 @@ import {
 import modules from "./data/modules.json";
 
 const ModuleCards = (props) => {
+    document.title = "Indice - MoondoReyes";
+
     let sorted_module_keys = Object.keys(modules).sort((a, b) => {
         if (a.startsWith("P")){
             if(!b.startsWith("P")){
                 return -1;
             }
-            console.log(a + " " + b);
-            return parseInt(a.match(/\d+/)[0]) - parseInt(b.match(/\d+/)[0]);
+            return parseInt(a.match(/\d+/)[0], 10) - parseInt(b.match(/\d+/)[0], 10);
         }
-        return b.startsWith("P")? 1: parseInt(a) - parseInt(b);
+        return b.startsWith("P")? 1: parseInt(a, 10) - parseInt(b, 10);
     });
-    console.log(sorted_module_keys);
 
     let modules_cards_html = sorted_module_keys.map((key) => {
-        let url = null;
         let current_module = modules[key];
-        let image = require("./content/P2/MP2.2/CiudadSostenible.jpg");
-        url = image;
+        // let image = require("./content/P2/MP2.2/CiudadSostenible.jpg");
+        // let url = image;
         // let background_with_image = "url(" + url + ") bottom right 15% no-repeat #46B6AC" ;
         let background = "bottom right 15% no-repeat " + (!current_module.color ? "#46B6AC" : current_module.color);
         return (

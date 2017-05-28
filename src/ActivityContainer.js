@@ -8,42 +8,36 @@ class ActivityContainer extends Component {
 
         let module_id = props.match.params.module_id;
         let topic_id = props.match.params.topic_id;
+        let page_title = modules[module_id].topics.find(element => element.file === topic_id).name;
 
         this.state = {
             file_markdown: null,
-            topic_id
+            topic_id,
+            page_title
         }
-
-
-        let page_title = modules[module_id].topics.find(element => element.file === topic_id).name;
 
         document.title = page_title + " - Moondo Reyes";
 
         this.file_content = require("./content/" + module_id + "/" + topic_id + "/" + topic_id + ".md");
-        this.file_markdown = null;
 
         this.getFileContent = this.getFileContent.bind(this);
     }
 
     componentWillReceiveProps(nextProps){
         if(this.state.topic_id !== nextProps.match.params.topic_id){
+            let module_id = nextProps.match.params.module_id;
+            let topic_id = nextProps.match.params.topic_id;
+            let page_title = modules[module_id].topics.find(element => element.file === topic_id).name;
+
             this.setState({
-                topic_id: nextProps.match.params.topic_id,
                 file_markdown: null,
+                page_title,
+                topic_id
             });
+
+            this.file_content = require("./content/" + module_id + "/" + topic_id + "/" + topic_id + ".md");
         }
     }
-
-    shouldComponentUpdate(nextProps, nextState){
-        console.log(nextProps);
-        console.log(nextState);
-        console.log(this.state);
-
-        return nextProps.match.params.topic_id !== this.state.topic_id ||
-            this.state.topic_id !== nextState.topic_id ||
-            this.state.file_markdown !== nextState.file_markdown;
-    }
-
 
 
     getFileContent(){
@@ -70,11 +64,14 @@ class ActivityContainer extends Component {
     }
 
     render(){
-        if(!this.file_markdown) {
+        if(!this.state.file_markdown) {
             this.getFileContent();
         }
 
-        return <ActivityPresentation data={this.state.file_markdown} />
+        return <ActivityPresentation
+            data={this.state.file_markdown}
+            title={this.state.page_title}
+        />
     }
 
 }

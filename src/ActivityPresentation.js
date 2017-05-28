@@ -6,9 +6,13 @@ import {
     Grid
 } from "react-mdl";
 
-const ActivityPresentation = ({data}) => {
+const ActivityPresentation = ({data, title}) => {
     if (!data){
         data = "";
+    }
+
+    if(!title){
+        title = "";
     }
     let converter = new showdown.Converter();
     let content = converter.makeHtml(data);
@@ -46,6 +50,45 @@ const ActivityPresentation = ({data}) => {
             <Cell col={2}></Cell>
             <Cell col={8} style={{background: "#fafafa"}}>
                 <div style={{margin: "4em 5em"}}>
+                    <Grid>
+                        <Cell col={12} style={{marginTop:"0", marginBottom:"0"}}>
+                            <Grid>
+                                <Cell col={2}>Nombre:</Cell>
+                                <Cell col={10}>
+                                    <hr/>
+                                </Cell>
+                            </Grid>
+                        </Cell>
+                        <Cell col={4} style={{marginTop:"0", marginBottom:"0"}}>
+                            <Grid>
+                                <Cell col={4}>Matricula:</Cell>
+                                <Cell col={8}>
+                                    <hr/>
+                                </Cell>
+                            </Grid>
+                        </Cell>
+                        <Cell col={4} style={{marginTop:"0", marginBottom:"0"}}>
+                            <Grid>
+                                <Cell col={4}>Grupo:</Cell>
+                                <Cell col={8}>
+                                    <hr/>
+                                </Cell>
+                            </Grid>
+                        </Cell>
+                        <Cell col={4} style={{marginTop:"0", marginBottom:"0"}}>
+                            <Grid>
+                                <Cell col={4}>Fecha:</Cell>
+                                <Cell col={8}>
+                                    <hr/>
+                                </Cell>
+                            </Grid>
+                        </Cell>
+                    </Grid>
+                    <Grid>
+                        <Cell col={12} style={{textAlign:"center", marginTop:"0", marginBottom:"0"}}>
+                            <h3 style={{marginTop:"0", marginBottom:"0"}}>{title}</h3>
+                        </Cell>
+                    </Grid>
                     {react_components}
                 </div>
             </Cell>

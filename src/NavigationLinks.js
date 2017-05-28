@@ -20,7 +20,16 @@ const NavigationLinks = ({props}) =>{
     });
 
     let navigation_links = sorted_module_keys.map((key) => {
-        let module_links = modules[key].topics.map(object => (
+        let sorted_topics =modules[key].topics.sort((el1, el2) => {
+            let el1_numbers = el1.file.match(/\d+$/);
+            let el2_numbers = el2.file.match(/\d+$/);
+
+            let last_number_el1 = parseInt(el1_numbers[0], 10);
+            let last_number_el2 = parseInt(el2_numbers[0], 10);
+
+            return last_number_el1 - last_number_el2;
+        });
+        let module_links = sorted_topics.map(object => (
             <Link to={"/M" + key + "/" + object.file} key={object.file} className="mdl-navigation__link">{object.file}</Link>
         ));
         return (

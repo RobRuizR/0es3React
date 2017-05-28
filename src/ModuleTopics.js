@@ -20,8 +20,8 @@ const ModuleTopics = ({match}) => {
         let el1_numbers = el1.file.match(/\d+$/);
         let el2_numbers = el2.file.match(/\d+$/);
 
-        let last_number_el1 = parseInt(el1_numbers[0]);
-        let last_number_el2 = parseInt(el2_numbers[0]);
+        let last_number_el1 = parseInt(el1_numbers[0], 10);
+        let last_number_el2 = parseInt(el2_numbers[0], 10);
 
         return last_number_el1 - last_number_el2;
     });

@@ -6,12 +6,15 @@ class ActivityContainer extends Component {
     constructor(props){
         super(props);
 
-        this.state = {
-            file_markdown: null,
-        }
-
         let module_id = props.match.params.module_id;
         let topic_id = props.match.params.topic_id;
+
+        this.state = {
+            file_markdown: null,
+            topic_id
+        }
+
+
         let page_title = modules[module_id].topics.find(element => element.file === topic_id).name;
 
         document.title = page_title + " - Moondo Reyes";
@@ -21,6 +24,27 @@ class ActivityContainer extends Component {
 
         this.getFileContent = this.getFileContent.bind(this);
     }
+
+    componentWillReceiveProps(nextProps){
+        if(this.state.topic_id !== nextProps.match.params.topic_id){
+            this.setState({
+                topic_id: nextProps.match.params.topic_id,
+                file_markdown: null,
+            });
+        }
+    }
+
+    shouldComponentUpdate(nextProps, nextState){
+        console.log(nextProps);
+        console.log(nextState);
+        console.log(this.state);
+
+        return nextProps.match.params.topic_id !== this.state.topic_id ||
+            this.state.topic_id !== nextState.topic_id ||
+            this.state.file_markdown !== nextState.file_markdown;
+    }
+
+
 
     getFileContent(){
         if(this.file_content.startsWith("data:text/x-markdown;base64,")){

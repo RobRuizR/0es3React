@@ -16,7 +16,17 @@ import modules from "./data/modules.json";
 const ModuleTopics = ({match}) => {
     document.title = modules[match.params.module_id].name + " - Moondo Reyes";
 
-    const topics = modules[match.params.module_id].topics.map(object => (
+    let sorted_topics = modules[match.params.module_id].topics.sort((el1, el2) => {
+        let el1_numbers = el1.file.match(/\d+$/);
+        let el2_numbers = el2.file.match(/\d+$/);
+
+        let last_number_el1 = parseInt(el1_numbers[0]);
+        let last_number_el2 = parseInt(el2_numbers[0]);
+
+        return last_number_el1 - last_number_el2;
+    });
+
+    const topics = sorted_topics.map(object => (
         <Cell col={3} tablet={4} phone={6} key={object.file}>
             <Card shadow={0}
                 style={{width: '100%', height: '320px', margin: 'auto'}}>

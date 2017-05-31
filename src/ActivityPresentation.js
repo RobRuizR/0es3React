@@ -6,6 +6,8 @@ import {
     Grid
 } from "react-mdl";
 
+import styles from "./Activity.css";
+
 const ActivityPresentation = ({data, title}) => {
     if (!data){
         data = "";

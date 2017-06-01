@@ -5,3 +5,12 @@
 .left-table-align th{
     text-align: center !important;
 }
+.M218Table {
+    width: 100% !important;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.full-height-img img {
+    height: 90%;
+}

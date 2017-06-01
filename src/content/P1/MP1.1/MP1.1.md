@@ -23,21 +23,30 @@ Contesta ampliamente las siguientes preguntas:
 
 Estas son algunas de las imágenes que de los subtemas vistos en clase!...
 
-![](./content/P1/MP1.1/matita.gif)
+<div class="mdl-grid">
 
+<div class="full-height-img mdl-cell mdl-cell--6-col mdl-typography--text-center">
+<img src="./content/P1/MP1.1/OSOPOLAR.gif">
+<p>
 Animales en peligro!...
-
-![](./content/P1/MP1.1/OSOPOLAR.gif)
-
-Calentamiento global!...
-
-![](./content/P1/MP1.1/deforestation_brazil.jpg)
-
+</p>
+</div>
+<div class="full-height-img mdl-cell mdl-cell--6-col mdl-typography--text-center">
+<img src="./content/P1/MP1.1/deforestation_brazil.jpg">
+<p>Calentamiento global!...</p>
+</div>
+<div class="full-height-img mdl-cell mdl-cell--6-col mdl-typography--text-center">
+<img src="./content/P1/MP1.1/beforeandafter.jpg">
+</div>
+<div class="full-height-img mdl-cell mdl-cell--6-col mdl-typography--text-center">
+<img src="./content/P1/MP1.1/CONTA.gif">
+</div>
+<div class="mdl-cell mdl-cell--12-col mdl-typography--text-center">
+<p>
 Deforestación!... Contaminación!...
-
-![](./content/P1/MP1.1/beforeandafter.jpg)
-
-![](./content/P1/MP1.1/CONTA.gif)
+</p>
+</div>
+</div>
 
 No olvides que las actividades también se deben de entregar con tiempo!..
 

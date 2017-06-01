@@ -91,6 +91,7 @@ const ActivityPresentation = ({data, title}) => {
                             <h3 style={{marginTop:"0", marginBottom:"0"}}>{title}</h3>
                         </Cell>
                     </Grid>
+                    <br/>
                     {react_components}
                 </div>
             </Cell>

@@ -29,7 +29,8 @@ const ActivityPresentation = ({data, title}) => {
                 let img = "";
                 try {
                     img = require(node.attribs['src']);
-                    img = <img src={img} style={{maxWidth:"100%"}} alt={node.attribs['alt']} />
+                    let classes = node.attribs['class'];
+                    img = <img src={img} className={classes} style={{maxWidth:"100%"}} alt={node.attribs['alt']} />
                 } catch (exception){
                     console.log("Error on " + node.attribs["src"]);
                 } finally {

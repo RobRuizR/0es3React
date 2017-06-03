@@ -14,3 +14,7 @@
 .full-height-img img {
     height: 90%;
 }
+
+img.half-width-img  {
+    width: 50%;
+}

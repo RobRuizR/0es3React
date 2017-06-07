@@ -5,6 +5,24 @@
 .left-table-align th{
     text-align: center !important;
 }
+
+.center-table-align td,
+.center-table-align th{
+    text-align:center !important;
+}
+
+.M4-37-Table{
+    border: 1px solid #aaa;
+}
+
+.M4-37-Table td,
+.M4-37-Table th,
+.activity-display-table td,
+.activity-display-table th {
+    border: 1px solid #aaa;
+    padding: 10px 5px;
+}
+
 .M218Table {
     width: 100% !important;
     margin-bottom: 2em;
@@ -17,4 +35,24 @@
 
 img.half-width-img  {
     width: 50%;
+}
+
+.full-height {
+    height:100%;
+}
+
+.M4-37-table .mdl-cell{
+    border: 1px solid #aaa;
+}
+.M4-37-table {
+    border: 1px solid #aaa;
+}
+
+.vertical-align-middle {
+    margin: auto !important;
+    position:relative !important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }

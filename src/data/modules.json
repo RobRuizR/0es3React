@@ -281,14 +281,21 @@
     },
     "5": {
         "color": "rgb(33, 150, 243)",
-        "topics": [],
+        "topics": [
+            {
+                "image": "",
+                "name": "Enfriamiento natural",
+                "file": "M5.58",
+                "description": ""
+            }
+        ],
         "name": "Calentamiento y enfriamiento pasivo"
     },
     "6": {
         "color": "rgb(255, 152, 0)",
         "topics": [{
             "image": "",
-            "name": "",
+            "name": "Soleamiento pasivo. Repentina sabatina.",
             "file": "M6.59",
             "description": ""
         }],
@@ -298,12 +305,12 @@
         "color": "rgb(233, 30, 99)",
         "topics": [{
             "image": "",
-            "name": "",
+            "name": "Case Studies",
             "file": "M7.60",
             "description": ""
         }, {
             "image": "",
-            "name": "",
+            "name": "Ejercicio de Dilema Ético",
             "file": "M7.61",
             "description": ""
         }],
@@ -313,12 +320,12 @@
         "color": "rgb(103, 58, 183)",
         "topics": [{
             "image": "",
-            "name": "",
+            "name": "Simulación del soleamiento en 3 ciudades y un recorrido virtual",
             "file": "M8.62",
             "description": ""
         }, {
             "image": "",
-            "name": "",
+            "name": "Recorrido en Sketchup",
             "file": "M8.63",
             "description": ""
         }, {

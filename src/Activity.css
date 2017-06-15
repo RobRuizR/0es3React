@@ -56,3 +56,29 @@ img.half-width-img  {
     bottom: 0;
     right: 0;
 }
+
+blockquote:before {
+    content: "" !important;
+}
+
+blockquote:after {
+    content: "" !important;
+    margin-left: 0 !important;
+}
+
+blockquote {
+    border-left: #aaa 3px solid;
+    padding-left: 1em;
+}
+
+blockquote li {
+    list-style-type: none;
+    font-style: normal;
+    text-align: right;
+}
+
+blockquote li:before {
+    content: "\2014";
+    font-weight: bold;
+    margin-right: 1em;
+}

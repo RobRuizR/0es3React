@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {
+    IconToggle,
     Navigation
 } from "react-mdl";
 
@@ -20,7 +21,10 @@ class NavigationModule extends Component {
         this.showLinks = this.showLinks.bind(this);
     }
 
-    showLinks(){
+    showLinks(event){
+        if(event){
+            event.preventDefault();
+        }
         this.setState(prevState => ({
             open: !prevState.open
         }))
@@ -30,7 +34,14 @@ class NavigationModule extends Component {
         return (
             <Navigation key={this.key} style={{paddingTop:0}}>
                 <div className="mdl-navigation__link content-grid mdl-grid" style={{color:this.color}} onClick={this.showLinks}>
-                    {"Módulo " + (this.key.startsWith("P")?("Preliminar " + this.key.match(/\d+/)[0]) : this.key) + ": " + this.name}
+                    <table>
+                        <thead>
+                            <tr>
+                                <td className="module_name">{"Módulo " + (this.key.startsWith("P")?("Preliminar " + this.key.match(/\d+/)[0]) : this.key) + ": " + this.name}</td>
+                                <td className="is_open"><IconToggle name={this.state.open?"keyboard_arrow_down":"keyboard_arrow_right"} /></td>
+                            </tr>
+                        </thead>
+                    </table>
                 </div>
                 {this.state.open?this.links: ""}
             </Navigation>

@@ -34,6 +34,7 @@ const ModuleTopics = ({match}) => {
                         {object.file}
                     </CardTitle>
                     <CardText>
+                        {object.name}
                     </CardText>
                     <CardActions border>
                         <Link to={"/M" + match.params.module_id + "/" + object.file}>

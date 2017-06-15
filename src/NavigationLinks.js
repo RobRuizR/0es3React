@@ -2,9 +2,7 @@ import React from 'react'
 import {
     Link,
 } from 'react-router-dom'
-import {
-    Navigation
-} from "react-mdl";
+import NavigationModule from "./NavigationModule"
 
 import modules from "./data/modules.json";
 
@@ -20,7 +18,7 @@ const NavigationLinks = ({props}) =>{
     });
 
     let navigation_links = sorted_module_keys.map((key) => {
-        let sorted_topics =modules[key].topics.sort((el1, el2) => {
+        let sorted_topics = modules[key].topics.sort((el1, el2) => {
             let el1_numbers = el1.file.match(/\d+$/);
             let el2_numbers = el2.file.match(/\d+$/);
 
@@ -35,12 +33,12 @@ const NavigationLinks = ({props}) =>{
         return (
             <span key={key}>
                 <hr className="navbar_hr"/>
-                <Navigation key={key}>
-                    <div className="mdl-navigation__link" style={{color:modules[key].color}}>
-                        {"Módulo " + (key.startsWith("P")?("Preliminar " + key.match(/\d+/)[0]) : key) + ": " + modules[key].name}
-                    </div>
-                    {module_links}
-                </Navigation>
+                <NavigationModule
+                    keyProp={key}
+                    name={modules[key].name}
+                    color={modules[key].color}
+                    links={module_links}
+                />
             </span>
         );
     });

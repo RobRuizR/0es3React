@@ -2,41 +2,24 @@ import React from 'react'
 import {
     Link,
 } from 'react-router-dom'
+import { connect, Provider } from 'react-redux';
+
 import NavigationModule from "./NavigationModule"
 
-import modules from "./data/modules.json";
-
-const NavigationLinks = ({props}) =>{
-    let sorted_module_keys = Object.keys(modules).sort((a, b) => {
-        if (a.startsWith("P")){
-            if(!b.startsWith("P")){
-                return -1;
-            }
-            return parseInt(a.match(/\d+/)[0], 10) - parseInt(b.match(/\d+/)[0], 10);
-        }
-        return b.startsWith("P")? 1: parseInt(a, 10) - parseInt(b, 10);
-    });
-
-    let navigation_links = sorted_module_keys.map((key) => {
-        let sorted_topics = modules[key].topics.sort((el1, el2) => {
-            let el1_numbers = el1.file.match(/\d+$/);
-            let el2_numbers = el2.file.match(/\d+$/);
-
-            let last_number_el1 = parseInt(el1_numbers[0], 10);
-            let last_number_el2 = parseInt(el2_numbers[0], 10);
-
-            return last_number_el1 - last_number_el2;
-        });
-        let module_links = sorted_topics.map(object => (
-            <Link to={"/M" + key + "/" + object.file} key={object.file} className="mdl-navigation__link">{object.file}</Link>
+const NavigationLinks = (props) =>{
+    console.log(props);
+    let modules = props.modules
+    let navigation_links = modules.map(({module_id, color, name, topics}) => {
+        let module_links = topics.map(object => (
+            <Link to={"/M" + module_id + "/" + object.file} key={object.file} className="mdl-navigation__link">{object.file}</Link>
         ));
         return (
-            <span key={key}>
+            <span key={module_id}>
                 <hr className="navbar_hr"/>
                 <NavigationModule
-                    keyProp={key}
-                    name={modules[key].name}
-                    color={modules[key].color}
+                    keyProp={module_id}
+                    name={name}
+                    color={color}
                     links={module_links}
                 />
             </span>
@@ -47,4 +30,12 @@ const NavigationLinks = ({props}) =>{
 }
 
 
-export default NavigationLinks;
+// This function connects React and Redux
+function mapStateToProps(application_state){
+    // Whatever is returned here will be shown as props inside BookList
+    return {
+        modules: application_state.modules,
+    };
+}
+
+export default connect(mapStateToProps)(NavigationLinks);

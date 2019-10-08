@@ -4,14 +4,15 @@
   "private": true,
   "dependencies": {
     "html-to-react": "^1.2.8",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
     "react-icons": "^2.2.5",
     "react-markdown": "^2.5.0",
     "react-markdown-file": "0.0.4",
     "react-markdown-to-html": "^1.0.11",
     "react-mdl": "^1.10.3",
-    "react-router-dom": "^5.1.2"
+    "react-router-dom": "^5.1.2",
+    "showdown": "^1.9.0"
   },
   "devDependencies": {
     "file-loader": "^0.11.1",

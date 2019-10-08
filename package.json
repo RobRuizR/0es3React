@@ -10,7 +10,8 @@
     "react-markdown": "^2.5.0",
     "react-markdown-file": "0.0.4",
     "react-markdown-to-html": "^1.0.11",
-    "react-mdl": "^1.10.3"
+    "react-mdl": "^1.10.3",
+    "react-router-dom": "^5.1.2"
   },
   "devDependencies": {
     "file-loader": "^0.11.1",
